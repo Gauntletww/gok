@@ -13,7 +13,7 @@ const {JSDOM} = jsdom;
  const title = dom.window.document.querySelectorAll(".chapter-feed__container a div img")[0].src;
 
  
-for(title) {
+if(title) {
 
  
  

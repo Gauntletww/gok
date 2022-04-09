@@ -6,7 +6,7 @@ const {JSDOM} = jsdom;
 
 (async () => {
 
- const html = await axios.get('https://www.example.com');
+ const html = await axios.get('https://gaito.000webhostapp.com/test.html');
 
  const dom = new JSDOM(html.data);
 

@@ -4,21 +4,32 @@ const jsdom = require('jsdom');
 
 const {JSDOM} = jsdom;
 
+
 (async () => {
+const window = (new JSDOM(``, { pretendToBeVisual: true })).window;
 
- const html = await axios.get('https://mangadex.org/titles/latest');
+window.requestAnimationFrame(timestamp => {
 
-const resourceLoader = new jsdom.ResourceLoader({
-
-  proxy: "http://127.0.0.1:9001",
-
-  strictSSL: false,
-
-  userAgent: "Mellblomenator/9000",
+  console.log(timestamp > 0);
 
 });
+ const html = await axios.get('https://mangadex.org/titles/latest');
 
-const dom = new JSDOM(``, { resources: resourceLoader });
+  
+  
+  
+
+
+ 
+
+
+  
+  
+
+  
+
+
+const dom = new JSDOM(html.data);
 
  const title = dom.window.document.querySelectorAll(".chapter-feed__container a div img")[0].src;
 

@@ -1,18 +1,17 @@
 const axios = require('axios');
 
 const jsdom = require('jsdom');
+var cloudscraper = require('cloudscraper');
 
+var got=cloudscraper.get('https://manhwatop.com/');
+got(axios);
 const {JSDOM} = jsdom;
 
 
-(async () => {
-const window = (new JSDOM(``, { pretendToBeVisual: true })).window;
 
-window.requestAnimationFrame(timestamp => {
 
-  console.log(timestamp > 0);
+  
 
-});
  const html = await axios.get('https://manhwatop.com/');
   
   
@@ -26,7 +25,6 @@ window.requestAnimationFrame(timestamp => {
   
 
   
-
 
 const dom = new JSDOM(html.data);
 

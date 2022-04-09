@@ -6,7 +6,7 @@ const {JSDOM} = jsdom;
 
 (async () => {
 
- const html = await axios.get('https://gaito.000webhostapp.com/test');
+ const html = await axios.get('https://mangadex.org/titles/latest');
 
  const dom = new JSDOM(html.data);
 

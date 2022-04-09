@@ -9,7 +9,7 @@ const {JSDOM} = jsdom;
 
 
 
-
+(async () => {
   
 
  const html = await axios.get('https://manhwatop.com/');

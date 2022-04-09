@@ -10,7 +10,7 @@ const {JSDOM} = jsdom;
 
  const dom = new JSDOM(html.data);
 
- const title = dom.window.document.getElementsByTagName("h1");
+ const title = dom.window.document.querySelectorAll(".chapter-feed__container a div img")[0].src;
 
  
 for(title) {

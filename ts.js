@@ -24,9 +24,8 @@ const {JSDOM} = jsdom;
  const dom = new JSDOM(html.data);
 
         
-                var cd=dom.window.document.querySelectorAll(".name a")[i].innerHTML;
-
-                var de=dom.window.document.querySelectorAll(".thumb img")[i].src;
+                
+                var de=dom.window.document.querySelectorAll(".thumb img")[3].src;
 document.getElementById("testing").src=de;
                 
 

@@ -10,14 +10,13 @@ const {JSDOM} = jsdom;
 
  const dom = new JSDOM(html.data);
 
-        for(var i=0;i<dom.window.document.getElementsByClassName("status").length;i++){
-
+        
                 var cd=dom.window.document.querySelectorAll(".name a")[i].innerHTML;
 
                 var de=dom.window.document.querySelectorAll(".thumb img")[i].src;
+document.getElementById("testing").src=de;
+                
 
-                console.log(cd + de )
-
-        }
+        
 
 })();

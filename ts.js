@@ -19,15 +19,14 @@ const {JSDOM} = jsdom;
 
 
 
-}); 
+
 
  const dom = new JSDOM(html.data);
 
         
                 
                 var de=dom.window.document.querySelectorAll(".thumb img")[3].src;
-document.getElementById("testing").src=de;
-                
+console.log(de);
 
         
 

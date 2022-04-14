@@ -6,7 +6,7 @@ const {JSDOM} = jsdom;
 
 (async () => {
 
- const html = await axios.get('https://beemanga.net/latest-update/');
+ const html = await axios.get('https://www.asurascans.com/');
 
   
   
@@ -25,8 +25,8 @@ const {JSDOM} = jsdom;
 
         
                 
-                var de=dom.window.document.querySelectorAll(".thumb img")[3].src;
-console.log(de);
+                
+console.log(dom);
 
         
 
